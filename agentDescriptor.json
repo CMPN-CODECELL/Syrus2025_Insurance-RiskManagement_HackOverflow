@@ -1,0 +1,35 @@
+{
+  "aiPersonaIntegrationId": "bhimax-3076",
+  "version": "3.0.0",
+  "description": "AI Agent bhimax-3076 package version 3.0.0",
+  "data": {
+    "workflows": [
+      [
+        "workflows",
+        "risk-evaluation-9517.json"
+      ],
+      [
+        "workflows",
+        "ma-riskassement-2237-primary-workflow-for-risk-assement.json"
+      ]
+    ],
+    "models": [
+      [
+        "models",
+        "o1-mini.json"
+      ]
+    ],
+    "miniAgents": [
+      [
+        "miniAgents",
+        "riskassement-2237.json"
+      ]
+    ],
+    "aiPersonas": [
+      [
+        "aiPersonas",
+        "bhimax-3076.json"
+      ]
+    ]
+  }
+}

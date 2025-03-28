@@ -1,0 +1,25 @@
+{
+  "_id": "4b42ddd2-98a1-4a40-8063-96e99e94d8d4",
+  "aiPersonaId": "b9240c30-79d2-448e-be5e-2c8d0132b6aa",
+  "integrationId": "riskassement-2237",
+  "intentClassification": {
+    "modelId": "cf20b2f6-0bda-4a85-95b8-51fb3a888550"
+  },
+  "name": "RiskASSEMENT",
+  "primaryWorkflowId": "ea539e6d-5de6-415c-b182-551f052cc638",
+  "publisherAccountId": "12794584-665a-485e-b498-add9024c8240",
+  "scope": "ASSIS THE RISKS ",
+  "status": "Active",
+  "intents": [
+    {
+      "_id": "e26d2b75-41b9-487c-95e9-773a210c3775",
+      "name": "RISK EVALUATION",
+      "description": "Evaluates risk",
+      "examples": [
+        ""
+      ],
+      "workflowId": "ea76656f-d484-4f78-9366-1343f117cc5d",
+      "flowType": "Workflow"
+    }
+  ]
+}
