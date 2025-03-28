@@ -15,6 +15,8 @@ BimaX is a multi-agent AI system designed to enhance insurance risk assessment a
 - **Self-Evolving Fraud Detection:** AI-powered fraud detection that adapts to emerging fraud patterns.
 - **UPTIQ AI Integration:** AI workbench for advanced risk intelligence and data-driven decision-making.
 
+  ## Mentoring Round Implementations
+
 ## Health Insurance Implementation
 - **Medical Risk Assessment:** AI evaluates past medical records, pre-existing conditions, and lifestyle factors.
 - **Predictive Analysis:** Uses historical health data to predict future medical risks and claim probabilities.
