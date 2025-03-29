@@ -1,0 +1,12 @@
+{
+  "_id": "98c8525a-3942-4231-8a59-0c9f9efc6899",
+  "accountId": "12794584-665a-485e-b498-add9024c8240",
+  "appId": "default-app-for-account-12794584-665a-485e-b498-add9024c8240",
+  "createdAt": "2025-03-29T05:45:06.192Z",
+  "createdBy": "user-67102489-704e-430c-b6de-b3505fddb4fb",
+  "name": "RiskAssessments",
+  "publisherAccountId": "12794584-665a-485e-b498-add9024c8240",
+  "status": "available",
+  "updatedAt": "2025-03-29T05:45:06.192Z",
+  "updatedBy": "user-67102489-704e-430c-b6de-b3505fddb4fb"
+}

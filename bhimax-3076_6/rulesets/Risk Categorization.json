@@ -1,0 +1,90 @@
+{
+  "_id": "d7fee245-8b84-4f12-b30c-c83a95ba71f0",
+  "name": "Risk Categorization",
+  "status": "Active",
+  "facts": [
+    {
+      "_id": "9c4de240-2670-416d-994c-44b4dbefdbb6",
+      "name": "riskScore",
+      "type": "Number"
+    },
+    {
+      "_id": "b58636bb-5b77-43c0-8a19-abcf9208d7bb",
+      "name": "category",
+      "type": "String"
+    }
+  ],
+  "decisions": [
+    {
+      "_id": "0bf3fe75-4510-45e0-b43f-c9d404a40762",
+      "name": "Determine Risk Category green",
+      "conditions": {
+        "all": [
+          {
+            "fact": "9c4de240-2670-416d-994c-44b4dbefdbb6",
+            "operator": "lessThanInclusive",
+            "value": 40
+          }
+        ]
+      },
+      "output": {
+        "params": [
+          {
+            "type": "value",
+            "key": "category",
+            "value": "green"
+          }
+        ]
+      }
+    },
+    {
+      "_id": "710aafdf-53a8-4017-8ddd-d0e6084a72f4",
+      "name": "yellow",
+      "conditions": {
+        "all": [
+          {
+            "fact": "9c4de240-2670-416d-994c-44b4dbefdbb6",
+            "operator": "greaterThan",
+            "value": 40
+          },
+          {
+            "fact": "9c4de240-2670-416d-994c-44b4dbefdbb6",
+            "operator": "lessThan",
+            "value": 70
+          }
+        ]
+      },
+      "output": {
+        "params": [
+          {
+            "type": "value",
+            "key": "category",
+            "value": "yellow"
+          }
+        ]
+      }
+    },
+    {
+      "_id": "2cb9a076-b618-4bb8-860d-bdfbea50fd4e",
+      "name": "red ",
+      "conditions": {
+        "all": [
+          {
+            "fact": "9c4de240-2670-416d-994c-44b4dbefdbb6",
+            "operator": "greaterThan",
+            "value": 70
+          }
+        ]
+      },
+      "output": {
+        "params": [
+          {
+            "type": "value",
+            "key": "category",
+            "value": "red"
+          }
+        ]
+      }
+    }
+  ]
+}

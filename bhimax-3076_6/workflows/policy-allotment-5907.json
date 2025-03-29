@@ -1,0 +1,271 @@
+{
+  "_id": "b1aa7800-1640-44f6-85bc-b409f5c7f3a3",
+  "aiPersonaId": "b9240c30-79d2-448e-be5e-2c8d0132b6aa",
+  "integrationId": "policy-allotment-5907",
+  "name": "Workflow for Policy allotment",
+  "publisherAccountId": "12794584-665a-485e-b498-add9024c8240",
+  "startTaskId": "1743228846616",
+  "status": "Active",
+  "tasks": [
+    {
+      "_id": "1743228846616",
+      "type": "Input",
+      "config": {
+        "name": "UserInput",
+        "description": "Take user input",
+        "type": "string"
+      },
+      "transitions": [
+        {
+          "name": "Default",
+          "_id": "1743228846616-1743228893445",
+          "nextTask": "1743228893445"
+        }
+      ]
+    },
+    {
+      "_id": "1743228893445",
+      "type": "Ruleset",
+      "config": {
+        "name": "Ruleset",
+        "description": "Attach ruleset",
+        "rulesetId": "efe168a4-bded-49e0-a06e-39ca67bc23c9",
+        "mappings": []
+      },
+      "transitions": [
+        {
+          "name": "Default",
+          "_id": "1743228893445-1743229108784",
+          "nextTask": "1743229108784"
+        }
+      ]
+    },
+    {
+      "_id": "1743229108784",
+      "type": "DatabaseWrite",
+      "config": {
+        "name": "Table Write",
+        "description": "Write data in table",
+        "collectionConfigId": "98c8525a-3942-4231-8a59-0c9f9efc6899",
+        "operation": "insertMany",
+        "data": "{\n  \"userId\": \"12345\",\n  \"userName\": \"John Doe\",\n  \"policyType\": \"Premium Policy\",\n  \"coverageAmount\": 500000,\n  \"premiumCost\": 10000\n}\n"
+      },
+      "transitions": [
+        {
+          "name": "Default",
+          "_id": "1743229108784-1743229108784",
+          "nextTask": "1743229108784"
+        },
+        {
+          "name": "Default",
+          "_id": "1743229108784-1743229239729",
+          "nextTask": "1743229239729"
+        }
+      ]
+    },
+    {
+      "_id": "1743229239729",
+      "type": "CollectionRead",
+      "config": {
+        "name": "Table Read",
+        "description": "Read data from table",
+        "collectionConfigId": "98c8525a-3942-4231-8a59-0c9f9efc6899",
+        "filters": "",
+        "projections": ""
+      },
+      "transitions": [
+        {
+          "name": "Default",
+          "_id": "1743229239729-1743229271680",
+          "nextTask": "1743229271680"
+        }
+      ]
+    },
+    {
+      "_id": "1743229271680",
+      "type": "Display",
+      "config": {
+        "name": "Display",
+        "description": "Show data",
+        "formatVariables": [],
+        "type": "text",
+        "text": "<p>this your data </p>",
+        "rawText": "this your data"
+      },
+      "transitions": []
+    }
+  ],
+  "type": "Conversational",
+  "version": "latest",
+  "reactflow": {
+    "viewport": {
+      "x": 30.656123434312576,
+      "y": -93.31525017548847,
+      "zoom": 0.7620410780485662
+    },
+    "nodes": [
+      {
+        "id": "0",
+        "type": "Start",
+        "position": {
+          "x": 360,
+          "y": 400
+        },
+        "data": {},
+        "deletable": false,
+        "measured": {
+          "width": 240,
+          "height": 136
+        },
+        "selected": false
+      },
+      {
+        "id": "1743228846616",
+        "type": "Input",
+        "position": {
+          "x": 713.8216565701797,
+          "y": 429.2046392211056
+        },
+        "data": {},
+        "measured": {
+          "width": 260,
+          "height": 78
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "1743228893445",
+        "type": "Ruleset",
+        "position": {
+          "x": 713.8216565701797,
+          "y": 568.5056348124183
+        },
+        "data": {},
+        "measured": {
+          "width": 260,
+          "height": 78
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "1743229108784",
+        "type": "DatabaseWrite",
+        "position": {
+          "x": 713.8216565701797,
+          "y": 687.5763522471949
+        },
+        "data": {},
+        "measured": {
+          "width": 260,
+          "height": 78
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "1743229239729",
+        "type": "CollectionRead",
+        "position": {
+          "x": 1014.3303910683553,
+          "y": 687.5763522471949
+        },
+        "data": {},
+        "measured": {
+          "width": 260,
+          "height": 78
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "1743229271680",
+        "type": "Display",
+        "position": {
+          "x": 801.7434260521786,
+          "y": 837.94055219006
+        },
+        "data": {},
+        "measured": {
+          "width": 260,
+          "height": 78
+        },
+        "selected": false,
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "0-1743228846616",
+        "source": "0",
+        "target": "1743228846616",
+        "type": "Start",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 22,
+          "height": 22
+        },
+        "sourceHandle": "0-source-1",
+        "targetHandle": "1743228846616-target-1",
+        "selected": false
+      },
+      {
+        "id": "1743228846616-1743228893445",
+        "source": "1743228846616",
+        "target": "1743228893445",
+        "type": "Transition",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 22,
+          "height": 22
+        },
+        "sourceHandle": "1743228846616-source-3",
+        "targetHandle": "1743228893445-target-2",
+        "selected": false
+      },
+      {
+        "id": "1743228893445-1743229108784",
+        "source": "1743228893445",
+        "target": "1743229108784",
+        "type": "Transition",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 22,
+          "height": 22
+        },
+        "sourceHandle": "1743228893445-source-3",
+        "targetHandle": "1743229108784-target-2",
+        "selected": false
+      },
+      {
+        "id": "1743229108784-1743229108784",
+        "source": "1743229108784",
+        "target": "1743229108784",
+        "type": "Transition",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 22,
+          "height": 22
+        },
+        "sourceHandle": "1743229108784-source-3",
+        "targetHandle": "1743229108784-target-3",
+        "selected": false
+      },
+      {
+        "id": "1743229108784-1743229239729",
+        "source": "1743229108784",
+        "target": "1743229239729",
+        "selected": false,
+        "type": "Transition"
+      },
+      {
+        "id": "1743229239729-1743229271680",
+        "source": "1743229239729",
+        "target": "1743229271680",
+        "selected": false,
+        "type": "Transition"
+      }
+    ]
+  }
+}

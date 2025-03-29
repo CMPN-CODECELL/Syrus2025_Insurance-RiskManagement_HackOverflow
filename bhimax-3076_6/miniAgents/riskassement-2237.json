@@ -1,0 +1,25 @@
+{
+  "_id": "4b42ddd2-98a1-4a40-8063-96e99e94d8d4",
+  "aiPersonaId": "b9240c30-79d2-448e-be5e-2c8d0132b6aa",
+  "integrationId": "riskassement-2237",
+  "intentClassification": {
+    "modelId": "gemini-1.5-pro-latest"
+  },
+  "name": "RiskASSEMENT",
+  "primaryWorkflowId": "ea539e6d-5de6-415c-b182-551f052cc638",
+  "publisherAccountId": "12794584-665a-485e-b498-add9024c8240",
+  "scope": "a Risk Assessment Agent (RAA) that evaluates an applicant's eligibility for insurance by assigning a risk score out of 100. The system should analyze multiple factors, including health history, financial status, driving records, and property details, to determine the likelihood of claims. The LLM should generate a machine learning-based model using techniques like logistic regression, decision trees, or neural networks to predict risk based on historical data. The agent must classify applicants into low, medium, or high-risk categories, influencing insurance approval and premium rates. The system should integrate with external data sources, ensure compliance with regulations, and provide explainability in decision-making. Additionally, consider enhancements like blockchain for secure data storage, IoT integration for real-time risk updates, and AI-powered fraud detection. The output should include the risk score, key influencing factors, and a recommendation on insurance approval. Structure the response as a technical design document, including a high-level architecture, technology stack, and implementation plan",
+  "status": "Active",
+  "intents": [
+    {
+      "_id": "e26d2b75-41b9-487c-95e9-773a210c3775",
+      "name": "RISK EVALUATION",
+      "description": "Evaluates risk",
+      "examples": [
+        ""
+      ],
+      "workflowId": "ea76656f-d484-4f78-9366-1343f117cc5d",
+      "flowType": "Workflow"
+    }
+  ]
+}

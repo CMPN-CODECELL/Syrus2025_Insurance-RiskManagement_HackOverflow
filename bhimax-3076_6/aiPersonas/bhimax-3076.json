@@ -1,0 +1,81 @@
+{
+  "_id": "b9240c30-79d2-448e-be5e-2c8d0132b6aa",
+  "description": "",
+  "inferenceEngine": {
+    "modelId": "cf20b2f6-0bda-4a85-95b8-51fb3a888550"
+  },
+  "integrationId": "bhimax-3076",
+  "integrations": {},
+  "intentClassification": {
+    "modelId": "e71807ea-2e74-4c64-bb69-4a9047f63bbd"
+  },
+  "name": "BhimaX",
+  "publisherAccountId": "12794584-665a-485e-b498-add9024c8240",
+  "status": "Active",
+  "useAsChatbot": true,
+  "variables": {
+    "secrets": [],
+    "agent": [
+      "cibilScore",
+      "riskScore",
+      "category"
+    ]
+  },
+  "miniAgentIds": [
+    "4b42ddd2-98a1-4a40-8063-96e99e94d8d4",
+    "7a22858e-95d0-4032-9fca-475a7aacec12"
+  ],
+  "miniAgents": [
+    {
+      "_id": "7a22858e-95d0-4032-9fca-475a7aacec12",
+      "integrationId": "policy-allotment-8918",
+      "name": "Policy-Allotment",
+      "scope": "this agent will allot the policy based on the user fields ",
+      "intents": [
+        {
+          "_id": "cece9365-f236-4b1f-a79e-67e161a8d841",
+          "name": "Policy allotment",
+          "description": "This intent will allot the policy based on the user filed so that the user have access to do all the thins and get its oily based on that",
+          "examples": [
+            ""
+          ],
+          "workflowId": "b1aa7800-1640-44f6-85bc-b409f5c7f3a3",
+          "flowType": "Workflow"
+        }
+      ],
+      "miniAgentId": "7a22858e-95d0-4032-9fca-475a7aacec12"
+    },
+    {
+      "_id": "4b42ddd2-98a1-4a40-8063-96e99e94d8d4",
+      "integrationId": "riskassement-2237",
+      "name": "RiskASSEMENT",
+      "scope": "a Risk Assessment Agent (RAA) that evaluates an applicant's eligibility for insurance by assigning a risk score out of 100. The system should analyze multiple factors, including health history, financial status, driving records, and property details, to determine the likelihood of claims. The LLM should generate a machine learning-based model using techniques like logistic regression, decision trees, or neural networks to predict risk based on historical data. The agent must classify applicants into low, medium, or high-risk categories, influencing insurance approval and premium rates. The system should integrate with external data sources, ensure compliance with regulations, and provide explainability in decision-making. Additionally, consider enhancements like blockchain for secure data storage, IoT integration for real-time risk updates, and AI-powered fraud detection. The output should include the risk score, key influencing factors, and a recommendation on insurance approval. Structure the response as a technical design document, including a high-level architecture, technology stack, and implementation plan",
+      "intents": [
+        {
+          "_id": "e26d2b75-41b9-487c-95e9-773a210c3775",
+          "name": "RISK EVALUATION",
+          "description": "Evaluates risk",
+          "examples": [
+            ""
+          ],
+          "workflowId": "ea76656f-d484-4f78-9366-1343f117cc5d",
+          "flowType": "Workflow"
+        }
+      ],
+      "miniAgentId": "4b42ddd2-98a1-4a40-8063-96e99e94d8d4"
+    }
+  ],
+  "rags": [],
+  "intentWorkflows": [
+    {
+      "_id": "b1aa7800-1640-44f6-85bc-b409f5c7f3a3",
+      "integrationId": "policy-allotment-5907",
+      "name": "Workflow for Policy allotment"
+    },
+    {
+      "_id": "ea76656f-d484-4f78-9366-1343f117cc5d",
+      "integrationId": "risk-evaluation-9517",
+      "name": "Workflow for RISK EVALUATION"
+    }
+  ]
+}

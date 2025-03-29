@@ -1,0 +1,296 @@
+{
+  "_id": "ea76656f-d484-4f78-9366-1343f117cc5d",
+  "aiPersonaId": "b9240c30-79d2-448e-be5e-2c8d0132b6aa",
+  "integrationId": "risk-evaluation-9517",
+  "name": "Workflow for RISK EVALUATION",
+  "publisherAccountId": "12794584-665a-485e-b498-add9024c8240",
+  "startTaskId": "1743225530878",
+  "status": "Active",
+  "tasks": [
+    {
+      "_id": "1743225530878",
+      "type": "Input",
+      "config": {
+        "description": "Take user input",
+        "name": "CIBILinput",
+        "type": "number"
+      },
+      "transitions": [
+        {
+          "name": "Default",
+          "_id": "1743225530878-1743225816801",
+          "nextTask": "1743225816801"
+        }
+      ],
+      "globalVariables": [
+        {
+          "name": "cibilScore",
+          "referencePath": "$input.userInput"
+        }
+      ]
+    },
+    {
+      "_id": "1743225816801",
+      "type": "JSFunction",
+      "config": {
+        "description": "Execute JavaScript code",
+        "name": "JavaScript",
+        "snippetId": "9d160a1d-0e87-4adc-86ac-d50e53e2a507"
+      },
+      "transitions": [
+        {
+          "name": "Default",
+          "_id": "1743225816801-1743226179343",
+          "nextTask": "1743226179343"
+        }
+      ],
+      "globalVariables": [
+        {
+          "name": "cibilScore",
+          "referencePath": "$input.userInput"
+        },
+        {
+          "name": "riskScore",
+          "referencePath": "$js.riskScore"
+        }
+      ]
+    },
+    {
+      "_id": "1743226179343",
+      "type": "Ruleset",
+      "config": {
+        "description": "Attach ruleset",
+        "name": "Ruleset",
+        "rulesetId": "d7fee245-8b84-4f12-b30c-c83a95ba71f0",
+        "mappings": []
+      },
+      "transitions": [
+        {
+          "name": "Default",
+          "_id": "1743226179343-1743227055506",
+          "nextTask": "1743227055506"
+        }
+      ],
+      "globalVariables": [
+        {
+          "name": "riskScore",
+          "referencePath": "$js.riskScore"
+        },
+        {
+          "name": "category",
+          "referencePath": "$ruleset.category"
+        }
+      ]
+    },
+    {
+      "_id": "1743227055506",
+      "type": "DatabaseWrite",
+      "config": {
+        "description": "Write data in table",
+        "name": "Table Write",
+        "collectionConfigId": "98c8525a-3942-4231-8a59-0c9f9efc6899",
+        "operation": "insertMany",
+        "data": "[\n  {\n    \"cibilScore\": \"$input.userInput\",\n    \"riskScore\": \"$js.riskScore\",\n    \"category\": \"$ruleset.category\"\n  }\n]\n"
+      },
+      "transitions": [
+        {
+          "name": "Default",
+          "_id": "1743227055506-1743227386141",
+          "nextTask": "1743227386141"
+        }
+      ],
+      "globalVariables": [
+        {
+          "name": "cibilScore",
+          "referencePath": "$input.userInput"
+        },
+        {
+          "name": "riskScore",
+          "referencePath": "$js.riskScore"
+        },
+        {
+          "name": "category",
+          "referencePath": "$ruleset.category"
+        }
+      ]
+    },
+    {
+      "_id": "1743227386141",
+      "type": "Output",
+      "config": {
+        "description": "Output messages in conversation",
+        "name": "Output",
+        "text": "Your CIBIL Score is $input.userInput. Your Risk Score is $js.riskScore, which falls under the $ruleset.category category.\n",
+        "type": "external",
+        "formattingInstructions": ""
+      },
+      "transitions": [],
+      "globalVariables": [
+        {
+          "name": "cibilScore",
+          "referencePath": "$input.userInput"
+        },
+        {
+          "name": "riskScore",
+          "referencePath": "$js.riskScore"
+        },
+        {
+          "name": "category",
+          "referencePath": "$ruleset.categor"
+        }
+      ]
+    }
+  ],
+  "type": "Conversational",
+  "version": "latest",
+  "reactflow": {
+    "viewport": {
+      "x": 42.68245640086741,
+      "y": -8.137285321614513,
+      "zoom": 0.7553647478832212
+    },
+    "nodes": [
+      {
+        "id": "0",
+        "type": "Start",
+        "position": {
+          "x": 360,
+          "y": 400
+        },
+        "data": {},
+        "deletable": false,
+        "measured": {
+          "width": 240,
+          "height": 136
+        },
+        "selected": false
+      },
+      {
+        "position": {
+          "x": 689,
+          "y": 429
+        },
+        "type": "Input",
+        "id": "1743225530878",
+        "data": {},
+        "measured": {
+          "width": 260,
+          "height": 78
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "position": {
+          "x": 1000,
+          "y": 429
+        },
+        "type": "JSFunction",
+        "id": "1743225816801",
+        "data": {},
+        "measured": {
+          "width": 260,
+          "height": 78
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "position": {
+          "x": 486,
+          "y": 622
+        },
+        "type": "Ruleset",
+        "id": "1743226179343",
+        "data": {},
+        "measured": {
+          "width": 260,
+          "height": 78
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "position": {
+          "x": 919,
+          "y": 622
+        },
+        "type": "DatabaseWrite",
+        "id": "1743227055506",
+        "data": {},
+        "measured": {
+          "width": 260,
+          "height": 78
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "position": {
+          "x": 767,
+          "y": 741
+        },
+        "type": "Output",
+        "id": "1743227386141",
+        "data": {},
+        "measured": {
+          "width": 307,
+          "height": 78
+        },
+        "selected": false,
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "0-1743225530878",
+        "type": "Start",
+        "source": "0",
+        "target": "1743225530878",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 22,
+          "height": 22
+        },
+        "sourceHandle": "0-source-1",
+        "targetHandle": "1743225530878-target-1",
+        "selected": false
+      },
+      {
+        "type": "Transition",
+        "id": "1743225530878-1743225816801",
+        "source": "1743225530878",
+        "target": "1743225816801",
+        "selected": false
+      },
+      {
+        "type": "Transition",
+        "id": "1743225816801-1743226179343",
+        "source": "1743225816801",
+        "target": "1743226179343",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 22,
+          "height": 22
+        },
+        "sourceHandle": "1743225816801-source-3",
+        "targetHandle": "1743226179343-target-2",
+        "selected": false
+      },
+      {
+        "type": "Transition",
+        "id": "1743226179343-1743227055506",
+        "source": "1743226179343",
+        "target": "1743227055506",
+        "selected": false
+      },
+      {
+        "type": "Transition",
+        "id": "1743227055506-1743227386141",
+        "source": "1743227055506",
+        "target": "1743227386141",
+        "selected": false
+      }
+    ]
+  }
+}

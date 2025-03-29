@@ -1,0 +1,7 @@
+{
+  "_id": "9d160a1d-0e87-4adc-86ac-d50e53e2a507",
+  "aiPersonaId": "b9240c30-79d2-448e-be5e-2c8d0132b6aa",
+  "code": "const main = () => {\n    // Retrieve CIBIL score from input node\n    const cibilScore = input.userInput;\n\n    // Validate input\n    if (cibilScore < 300 || cibilScore > 900) {\n        return { error: \"Invalid CIBIL Score. Must be between 300 and 900.\" };\n    }\n\n    // Convert CIBIL score to Risk Score (0-100)\n    const riskScore = 100 - ((cibilScore - 300) / 6);\n\n    // Return the computed Risk Score\n    return { riskScore };\n};\n\n// Execute function\nmain();\n",
+  "name": "riskScore",
+  "status": "Active"
+}

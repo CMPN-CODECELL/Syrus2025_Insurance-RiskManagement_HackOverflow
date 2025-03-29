@@ -1,0 +1,25 @@
+{
+  "_id": "7a22858e-95d0-4032-9fca-475a7aacec12",
+  "aiPersonaId": "b9240c30-79d2-448e-be5e-2c8d0132b6aa",
+  "integrationId": "policy-allotment-8918",
+  "intentClassification": {
+    "modelId": "gemini-1.5-flash-latest"
+  },
+  "name": "Policy-Allotment",
+  "primaryWorkflowId": "cec2aea2-b4e8-43ed-93c2-eec28b9c6820",
+  "publisherAccountId": "12794584-665a-485e-b498-add9024c8240",
+  "scope": "this agent will allot the policy based on the user fields ",
+  "status": "Active",
+  "intents": [
+    {
+      "_id": "cece9365-f236-4b1f-a79e-67e161a8d841",
+      "name": "Policy allotment",
+      "description": "This intent will allot the policy based on the user filed so that the user have access to do all the thins and get its oily based on that",
+      "examples": [
+        ""
+      ],
+      "workflowId": "b1aa7800-1640-44f6-85bc-b409f5c7f3a3",
+      "flowType": "Workflow"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "_id": "efe168a4-bded-49e0-a06e-39ca67bc23c9",
+  "name": "PolicyAllotment",
+  "status": "Active",
+  "facts": [
+    {
+      "_id": "74cb37cd-c981-456b-9772-2af38eb6fead",
+      "name": "UserAge",
+      "type": "Number"
+    },
+    {
+      "_id": "d35a927e-a142-497a-94c2-b05de113eb26",
+      "name": "RiskScore",
+      "type": "Number"
+    }
+  ],
+  "decisions": [
+    {
+      "_id": "2e3cf058-29f8-4265-8967-f1d740f8a0d7",
+      "name": "Starter-Policy",
+      "conditions": {
+        "all": [
+          {
+            "fact": "74cb37cd-c981-456b-9772-2af38eb6fead",
+            "operator": "lessThanInclusive",
+            "value": 25
+          }
+        ]
+      },
+      "output": {
+        "params": [
+          {
+            "type": "value",
+            "key": "Policy",
+            "value": "Starter-Policy"
+          }
+        ]
+      }
+    },
+    {
+      "_id": "53977daa-a69b-41cf-88b2-937336676f30",
+      "name": "Basic-Policy",
+      "conditions": {
+        "all": [
+          {
+            "fact": "74cb37cd-c981-456b-9772-2af38eb6fead",
+            "operator": "greaterThan",
+            "value": 25
+          },
+          {
+            "fact": "74cb37cd-c981-456b-9772-2af38eb6fead",
+            "operator": "lessThanInclusive",
+            "value": 40
+          }
+        ]
+      },
+      "output": {
+        "params": [
+          {
+            "type": "value",
+            "key": "Policy",
+            "value": "Basic-Policy"
+          }
+        ]
+      }
+    },
+    {
+      "_id": "f4f81baf-508c-4cce-ad30-75e81bb9e1d6",
+      "name": "Life-Insuarance",
+      "conditions": {
+        "all": [
+          {
+            "fact": "74cb37cd-c981-456b-9772-2af38eb6fead",
+            "operator": "greaterThan",
+            "value": 40
+          }
+        ]
+      },
+      "output": {
+        "params": [
+          {
+            "type": "value",
+            "key": "Policy",
+            "value": "LifeInsaurance"
+          }
+        ]
+      }
+    }
+  ]
+}

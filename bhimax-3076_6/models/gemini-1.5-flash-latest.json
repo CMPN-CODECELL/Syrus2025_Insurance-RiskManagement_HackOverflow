@@ -1,0 +1,34 @@
+{
+  "_id": "gemini-1.5-flash-latest",
+  "name": "Gemini 1.5 Flash",
+  "description": "Fast and versatile performance across a diverse variety of tasks.",
+  "provider": "Google",
+  "providerModelId": "gemini-1.5-flash-latest",
+  "type": "Chat",
+  "isFineTunable": false,
+  "isJSONResponseSupported": true,
+  "price": {
+    "input": {
+      "basePrice": 0.35,
+      "threshold": 128000,
+      "aboveThresholdPrice": 0.7
+    },
+    "output": {
+      "basePrice": 1.05,
+      "threshold": 128000,
+      "aboveThresholdPrice": 2.1
+    }
+  },
+  "status": "Active",
+  "creator": "Google",
+  "isFineTuned": false,
+  "outgoingRequestIdentifierQuery": "body::jsonb ->> 'model' = 'gemini-1.5-flash-latest'",
+  "supportedMimeTypes": [
+    "image/png",
+    "image/jpeg",
+    "image/webp",
+    "image/heic",
+    "image/heif"
+  ],
+  "onDemandProvisioning": false
+}
