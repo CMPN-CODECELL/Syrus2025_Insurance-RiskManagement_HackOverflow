@@ -13,9 +13,10 @@ BimaX is a multi-agent AI system designed to enhance insurance risk assessment a
 - **Autonomous AI Agents:** Dedicated AI sub-agents for fraud detection, risk profiling, and compliance monitoring.
 - **Context-Aware Risk Scoring:** Dynamic risk recalibration based on predictive analytics and historical trends.
 - **Self-Evolving Fraud Detection:** AI-powered fraud detection that adapts to emerging fraud patterns.
-- **UPTIQ AI Integration:** AI workbench for advanced risk intelligence and data-driven decision-making.
+
 
 ## Mentoring Round Implementations
+
 
 ## Health Insurance Implementation
 - **Medical Risk Assessment:** AI evaluates past medical records, pre-existing conditions, and lifestyle factors.
@@ -31,3 +32,27 @@ BimaX is a multi-agent AI system designed to enhance insurance risk assessment a
 
 ## Tech Stack
 - **UPTIQ AI Workbench:** Core AI engine for risk assessment, fraud detection, and compliance monitoring.
+
+## Video Link Explanation
+- https://drive.google.com/drive/folders/1b5adHpuECWKtDyVFepgFMxc8RwHc-Nvy
+  
+## Implemented Features
+- **Risk Assessment Agent:** The Risk Assessment Agent leverages AI to analyze financial history, creditworthiness, and claims data, generating real-time risk scores to assist insurers in making informed underwriting decisions.
+- **Claims Processing Agent:** The Customer Support Agent automates real-time assistance for policyholders and agents, handling inquiries on policies, claims, and risk assessments to improve response times and customer satisfaction.
+- **Smart Contract & Compilance Agent:** The Smart Contract and Compliance Agent automates policy management, enforces contract terms, ensures regulatory compliance, and maintains secure, tamper-proof records to enhance efficiency and transparency in insurance processes.
+
+## Future Scope & Explanation
+- **Cross-Industry Applications:** – Expanding AI-driven fraud detection beyond insurance to industries like financial services, healthcare, and real estate to enhance overall risk management.
+- **Advanced NLP for Document Analysis:** – Utilizing Natural Language Processing (NLP) to quickly analyze policy documents, claims, and contracts, improving approval speed and fraud detection.
+- **Customer-Centric Enhancements:** – Implementing AI-powered chatbots and automated decision-making systems to improve customer experience and reduce the time taken for processing requests.
+- **Fraud Prevention Collaboration** – Partnering with regulatory authorities and insurers to build a shared fraud database, strengthening industry-wide fraud detection and prevention.
+
+
+
+
+
+
+
+
+
+
